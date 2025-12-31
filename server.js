@@ -13,6 +13,8 @@ const localAuthMiddleware = passport.authenticate('local', { session: false});
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());  // req.body
+
+// Using body-parser for form data
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const logRequest = (req, res, next) => {
